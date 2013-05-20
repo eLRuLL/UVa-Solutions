@@ -1,0 +1,4 @@
+line one with spaces
+line two with spaces
+alone
+line four with spaces
