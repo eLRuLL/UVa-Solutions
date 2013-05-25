@@ -6,9 +6,7 @@ int main(){
 	int m,n,res;
 	scanf("%d %d",&m,&n);
 	while(m!=0 || n!=0){
-		if(m==0 || n==0){
-			res = 0;
-		}else if(m==1 || n==1){
+		if(m==1 || n==1){
 			res = max(m,n);
 		}else if(m==2 || n==2){
 			res = (min((max(m,n)%4),2))*2 + (max(m,n)/4)*4;
