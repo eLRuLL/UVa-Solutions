@@ -20,8 +20,13 @@ int main(){
 	vector<int> fightersSG;
 	vector<int> fightersSB;
 
+	bool flag_first = false;
+
 	cin>>N;
 	while(N--){
+		if(flag_first){
+			cout<<endl;
+		}
 		cin>>B>>SG>>SB;
 
 		for(i=0; i<SG; i++){
@@ -74,18 +79,19 @@ int main(){
 		}
 
 		if(SG_army.empty() && SB_army.empty()){
-			cout<<"los 2 perdieron csm"<<endl;
+			cout<<"green and blue died"<<endl;
 		}else if(!SG_army.empty()){
-			cout<<"GREEN"<<endl;
+			cout<<"green wins"<<endl;
 			for(my_iterator = SG_army.begin(); my_iterator!= SG_army.end(); my_iterator++){
 				cout<<*my_iterator<<endl;
 			}
 		}else{
-			cout<<"BLUE"<<endl;
+			cout<<"blue wins"<<endl;
 			for(my_iterator = SB_army.begin(); my_iterator!= SB_army.end(); my_iterator++){
 				cout<<*my_iterator<<endl;
 			}
 		}
+		flag_first = true;
 
 		SG_army.clear();
 		SB_army.clear();
